@@ -23,7 +23,7 @@ const emojiFlag = require('emoji-flag');
 mongoose.set('strictQuery', false)
 app.use(helmet());
 
-mongoose.connect('mongodb+srv://rustchad71:zUQl9dMhANG64rxY@cluster0.lyyzdqs.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://rustchad71:zUQl9dMhANG64rxY@cluster1.j46viws.mongodb.net/?retryWrites=true&w=majority', {
 	useNewUrlParser: true
 });
 
