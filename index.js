@@ -373,7 +373,7 @@ async function getPlayerData(username) {
 	let url = `https://exuberant-red-abalone.cyclic.app/v2/profiles/${username}`
 	let config = {
 		headers: {
-			'Authorization': 'ybg336'
+			'Authorization': 'dunesapi'
 		}
 	}
 
@@ -390,7 +390,7 @@ async function getPlayerStatus(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/status/${username}`
 		let config = {
 			headers: {
-				'Authorization': 'ybg336'
+				'Authorization': 'dunesapi'
 			}
 		}
 		let response = await axios.get(url, config)
@@ -405,7 +405,7 @@ async function getPlayerDiscord(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/discord/${username}`;
 		let config = {
 			headers: {
-				Authorization: "ybg336"
+				Authorization: "dunesapi"
 			}
 		};
 		let response = await axios.get(url, config);
@@ -424,7 +424,7 @@ async function getNetworth(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/profiles/${username}`;
 		let config = {
 			headers: {
-				Authorization: "ybg336"
+				Authorization: "dunesapi"
 			}
 		};
 		let response = await axios.get(url, config);
