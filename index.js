@@ -23,7 +23,7 @@ const emojiFlag = require('emoji-flag');
 mongoose.set('strictQuery', false)
 app.use(helmet());
 
-mongoose.connect('mongodb+srv://dunebru:thisisinvalidLOL@clusterauth.ul7eu4j.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://rustchad71:zUQl9dMhANG64rxY@cluster1.j46viws.mongodb.net/?retryWrites=true&w=majority', {
 	useNewUrlParser: true
 });
 
@@ -373,7 +373,7 @@ async function getPlayerData(username) {
 	let url = `https://exuberant-red-abalone.cyclic.app/v2/profiles/${username}`
 	let config = {
 		headers: {
-			'Authorization': 'HedaHeda336'
+			'Authorization': 'ybg336'
 		}
 	}
 
@@ -390,7 +390,7 @@ async function getPlayerStatus(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/status/${username}`
 		let config = {
 			headers: {
-				'Authorization': 'HedaHeda336'
+				'Authorization': 'ybg336'
 			}
 		}
 		let response = await axios.get(url, config)
@@ -405,7 +405,7 @@ async function getPlayerDiscord(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/discord/${username}`;
 		let config = {
 			headers: {
-				Authorization: "HedaHeda336"
+				Authorization: "ybg336"
 			}
 		};
 		let response = await axios.get(url, config);
@@ -424,7 +424,7 @@ async function getNetworth(username) {
 		let url = `https://exuberant-red-abalone.cyclic.app/v2/profiles/${username}`;
 		let config = {
 			headers: {
-				Authorization: "HedaHeda336"
+				Authorization: "ybg336"
 			}
 		};
 		let response = await axios.get(url, config);
